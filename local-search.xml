@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Sliding Window</title>
+    <link href="/blogs/2023/07/07/Sliding-Window/"/>
+    <url>/blogs/2023/07/07/Sliding-Window/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Max-Consecutive-Sequence-After-Flips"><a href="#Max-Consecutive-Sequence-After-Flips" class="headerlink" title="Max Consecutive Sequence After Flips"></a>Max Consecutive Sequence After Flips</h2><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>Find the maximum length of consecutive ‘x’ of a sequence of length n consisting of ‘x’ and ‘y’ after fliping at most k ‘y’s to ‘x’.</p><h3 id="Template"><a href="#Template" class="headerlink" title="Template"></a>Template</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">longestOnes</span><span class="hljs-params">(string seq, <span class="hljs-type">int</span> k)</span> </span>&#123;<br>    <span class="hljs-type">int</span> l = <span class="hljs-number">0</span>, r = <span class="hljs-number">0</span>, numY = <span class="hljs-number">0</span>, maxLen = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span> (r &lt; seq.<span class="hljs-built_in">size</span>()) &#123;<br>        <span class="hljs-keyword">if</span> (seq[r] == <span class="hljs-string">&#x27;y&#x27;</span>) numY++;<br>        <span class="hljs-keyword">while</span> (numY &gt; k) &#123;<br>            <span class="hljs-keyword">if</span> (seq[l++] == <span class="hljs-string">&#x27;y&#x27;</span>) numY--;<br>        &#125;<br>        maxLen = <span class="hljs-built_in">max</span>(maxLen, r - l + <span class="hljs-number">1</span>);<br>        r++;<br>    &#125;<br>    <span class="hljs-keyword">return</span> maxLen;<br>&#125;<br></code></pre></td></tr></table></figure><h3 id="Sample-Questions"><a href="#Sample-Questions" class="headerlink" title="Sample Questions"></a>Sample Questions</h3><ul><li><a href="https://leetcode.com/problems/max-consecutive-ones-ii/">487. Max Consecutive Ones II</a></li><li><a href="https://leetcode.com/problems/max-consecutive-ones-iii/">1004. Max Consecutive Ones III</a></li><li><a href="https://leetcode.com/problems/maximize-the-confusion-of-an-exam/">2024. Maximize the Confusion of an Exam</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Sliding Window</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hexo Hello World</title>
     <link href="/blogs/2023/07/05/Hexo-Hello-World/"/>
     <url>/blogs/2023/07/05/Hexo-Hello-World/</url>
